@@ -15,7 +15,7 @@ custom:
         vim: vim 
     categories:
       - name:  linux
-        title: Linux 
+        title: linux 
       - name:  vim
         title: vim 
 
