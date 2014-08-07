@@ -3,4 +3,4 @@ permalink: /:year/:title/
 paginate: 10
 exclude: []
 name: Hzz's learning blog
-baseurl: /wecangonow.github.io
+#baseurl: /wecangonow.github.io
