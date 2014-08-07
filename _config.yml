@@ -12,17 +12,10 @@ desc: 记录一些点点滴滴
 custom:
     category:
         linux: linux 
-        php: php 
-        git: git 
         vim: vim 
     categories:
       - name:  linux
         title: Linux 
-
-      - name:  php
-        title: PHP
-      - name:  git
-        title: git 
       - name:  vim
         title: vim 
 
