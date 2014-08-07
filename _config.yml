@@ -11,15 +11,15 @@ desc: 记录一些点点滴滴
 
 custom:
     category:
-        Linux: Linux 
-        PHP: PHP 
+        linux: linux 
+        php: php 
         git: git 
         vim: vim 
     categories:
-      - name:  Linux
+      - name:  linux
         title: Linux 
 
-      - name:  PHP
+      - name:  php
         title: PHP
       - name:  git
         title: git 
