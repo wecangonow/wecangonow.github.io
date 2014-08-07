@@ -5,17 +5,20 @@ permalink: /posts/:title.html
 exclude:
   - README.md
 
-name: Your Site Name
+name: 水滴石穿
 host: yourdomain.com
-desc: Some description of your site.
+desc: 日积月累.
 
 custom:
     category:
         default: Default Category
         another: Another Category
+        linux: linux
     categories:
       - name:  default
         title: Default Category
+      - name:  linux
+        title: linux
 
       - name:  another
         title: Another Category
@@ -24,11 +27,11 @@ custom:
 
 meta:
     author:
-        name: Your Name
-        email: your-email@example.com
+        name: Haozhongzhi
+        email: wecangonow@sina.com
         disqus: your-disqus-short-name              # Disqus缩略标识
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
-        github: your-github-account                 # GitHub账号
+        github: wecangonow@sina.com
         gravatar: 1cd8c12591616d8c22aaa624f8c07834  # Gravatar头像标识
 
     disqus: disqus.com/embed.js                     # Disqus评论的JS地址
