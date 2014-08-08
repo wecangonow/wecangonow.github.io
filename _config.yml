@@ -11,17 +11,20 @@ desc: 日积月累.
 
 custom:
     category:
-        default: Default Category
-        another: Another Category
+        php: php
+        vim: vim
         linux: linux
+        git: git
     categories:
-      - name:  default
-        title: Default Category
+      - name:  php
+        title: php
       - name:  linux
         title: linux
 
-      - name:  another
-        title: Another Category
+      - name:  vim
+        title: vim
+      - name:  git
+        title: git
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
