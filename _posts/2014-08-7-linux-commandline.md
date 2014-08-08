@@ -39,10 +39,8 @@ A link
 
 This is a link [baidu](http://www.baidu.com "百度")
 
-###Test again
-
-hahahahahh
-==========
+我们现在越來越多的使用[百度]来进行信息的检索，逐渐形成了依赖。但是个人认为[google]还是很*强大*的，只是由于特殊的原因必须翻墙才可以用[google]，这让很多人不能享受到[google]的优质服务不能不说这确实是一件非常遗憾的事情。
 
 
 
+[百度]: https://baidu.com/ 
