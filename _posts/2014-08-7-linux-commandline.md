@@ -34,8 +34,10 @@ This is a code block
 
 
 
-This is a H2
+A link
 ------------
+
+This is a link [baidu](http://www.baidu.com"百度")
 
 ###Test again
 
