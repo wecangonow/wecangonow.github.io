@@ -37,7 +37,7 @@ This is a code block
 A link
 ------------
 
-This is a link [baidu](http://www.baidu.com"百度")
+This is a link [baidu](http://www.baidu.com "百度")
 
 ###Test again
 
