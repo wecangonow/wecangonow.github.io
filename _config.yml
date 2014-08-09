@@ -18,10 +18,13 @@ custom:
     categories:
       - name:  php
         title: php
+
       - name:  vim
         title: vim
+
       - name:  linux
         title: linux
+
       - name:  git
         title: git
 
