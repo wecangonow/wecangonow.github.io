@@ -15,6 +15,8 @@ custom:
         vim: vim
         linux: linux
         git: git
+        mysql: mysql
+        datastructure: data structure
     categories:
       - name:  php
         title: php
@@ -27,6 +29,12 @@ custom:
 
       - name:  git
         title: git
+
+      - name:  mysql
+        title: mysql
+
+      - name:  datastructure
+        title: data structure
 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
