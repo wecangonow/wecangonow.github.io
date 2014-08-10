@@ -1,7 +1,7 @@
 ---
 layout: post
-title:PHP Caching to Speed up Dynamically Generated Sites
-category:php
+title: PHP Caching to Speed up Dynamically Generated Sites
+category: php
 ---
 
 This entire site, like many, is built in PHP. PHP provides the power to simply 'pull' content from an external source, in the case of my site this is flat files but it could just as easily be an MySQL database or an XML file etc..
