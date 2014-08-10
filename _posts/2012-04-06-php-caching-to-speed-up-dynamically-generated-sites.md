@@ -20,7 +20,7 @@ Ironically, these so-called 'dynamic' sites probably have very little changing c
 This is where caching can help us out,instead of regenerating the page every time,the scripts running this site generate it the first time they are asked to,then store a copy of what they send back to your browser.The next time a visitor requests the same page,the script will know it'd already generated on recently,and simply send that to the browser without all the hassle of re-running database queries or searches.
 
 
-$An Illustration  
+#An Illustration  
 
 This example shows a request for a "News" page on a website,the News changes daily so it makes sense to have it in a database rather than in a static file so it can be easily updated and searched,The News page is a PHP script which does the following:
 
@@ -30,5 +30,38 @@ This example shows a request for a "News" page on a website,the News changes dai
 *	Read a template file and substitute variables for content
 *	Output the finished page to the user 
 
-![Alt text](http://www.theukwebdesigncompany.com/articles/images/article251/nocache.png "Optional title")
+![Alt text](http://www.theukwebdesigncompany.com/articles/images/article251/nocache.png)
 
+
+This takes a considerable amount of time,it's negigable if you get one or two visitors an hour,but if you get 500 visitors an hour it makes a big difference.
+
+
+Consider the difference between this,and a straight forward request for a normal .html file. The web server doesnt have to do any hard work serve up a .html file,it just finds the file and dumps it's contents to browser ... using caching allow you experience this speed gain even with dynamic sites.
+
+
+Continuing the same example, but where caching is in place, the first user to request the News page would cause the script to do exactly as above, and in addition actually increase the load by making it write the result to a file, as well as to the browser. However, subsequent requests would work something like this:
+
+
+![Alt text](http://www.theukwebdesigncompany.com/articles/images/article251/withcache.png)
+
+As you can see, the MySQL database and Templates aren't touched, the web server just sends back the contents of a plain .html file to the browser. The request is completed in a fraction of the time, the user gets their page faster, and your server has less load on it - everyone's happy.
+
+
+#Implementing a Cache in PHP
+
+
+The Output Buffer, introduced in recent versions of PHP, is ideal for this. Basically if you call ob_start() at the start of your program, it supresses all output until you specifically flush the output buffer. You can therefore easily get at the output of any PHP script.
+
+
+Let's look at the most basic,and rather useless,cache.This little snippet of code will save  the output of a call for the 'home' page into a file called home.html
+
+	<?php
+		// start the output buffer 
+		ob_start();
+		// your usual PHP script and HTML here ... 
+	?>
+
+	<?php
+		\$cachefile = "cache/home.html";
+
+		\$fp = fopen(\$cachefile,'w');
