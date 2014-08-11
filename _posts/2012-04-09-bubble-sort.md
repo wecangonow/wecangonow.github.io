@@ -23,3 +23,60 @@ category: linux
 3.	针对所有的元素重复以上的步骤，除了最后一个。
 
 4.	持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。 
+
+
+#算法分析
+
+##算法稳定性
+
+冒泡排序就是把小的元素往前调或者把大的元素往后调。比较是相邻的两个元素比较，交换也发生在这两个元素之间。所以，如果两个元素相等，我想你是不会再无聊地把他们俩交换一下的；如果两个相等的元素没有相邻，那么即使通过前面的两两交换把两个相邻起来，这时候也不会交换，所以相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。
+
+##算法描述
+
+
+c语言
+	
+
+	#include <stdio.h>
+	#define SIZE 8
+	
+	void bubble_sort(int *, int n);
+	
+	void bubble_sort(int a[], int n)
+	{
+		int i, j, tmp;
+	
+		for (j = 0; j < n-1; j++)
+		{
+	
+			for (i = 0; i < n-1-j; i++) 
+			{
+	
+				if(a[i] > a[i+1])
+				{
+					tmp = a[i];
+					a[i] = a[i+1];
+					a[i+1] = tmp;
+				}
+	
+			}
+		}
+	
+	
+	}
+	
+	int main(int argc, char const* argv[])
+	{
+		int bubble[SIZE] = {94,45,15,78,84,51,24,12};
+	
+		bubble_sort(bubble,SIZE);
+	
+		for (int i = 0; i < SIZE; i++)
+		{
+	
+			printf("%d\n",bubble[i] );
+	
+		}
+		
+		return 0;
+	}
