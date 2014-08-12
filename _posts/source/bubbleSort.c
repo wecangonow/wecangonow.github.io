@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define SIZE 8
+#define SIZE 11
 
 void bubble_sort(int *, int n);
 
@@ -7,10 +7,10 @@ void bubble_sort(int a[], int n)
 {
 	int i, j, tmp;
 
-	for (j = 0; j < n-1; j++)
+	for (j = 1; j < n; j++)
 	{
 
-		for (i = 0; i < n-1-j; i++) 
+		for (i = 0; i < n-j; i++) 
 		{
 
 			if(a[i] > a[i+1])
@@ -21,6 +21,9 @@ void bubble_sort(int a[], int n)
 			}
 
 		}
+		printf("%d",j);
+		printf("%d",i);
+		printf("\n");
 	}
 
 
@@ -28,7 +31,7 @@ void bubble_sort(int a[], int n)
 
 int main(int argc, char const* argv[])
 {
-	int bubble[SIZE] = {94,45,15,78,84,51,24,12};
+	int bubble[SIZE] = {94,45,15,78,84,51,24,12,2,5,3};
 
 	bubble_sort(bubble,SIZE);
 

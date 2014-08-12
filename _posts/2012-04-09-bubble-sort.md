@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  冒泡算法!
-category: linux
+category: datastructure
 ---
 
 
