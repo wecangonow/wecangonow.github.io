@@ -21,3 +21,10 @@ function substr_utf8($str,$start,$length = null)
   print_r($chars);
 
   echo substr_utf8($str,2);
+
+
+  $str = '中国2北333北京';
+
+  echo mb_strlen($str,'utf8');
+  echo "<br />";
+  echo mb_substr($str,3,1,'utf8');
