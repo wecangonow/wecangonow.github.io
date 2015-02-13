@@ -1,4 +1,6 @@
 hzz-s-note
 ==========
 
- note of my learning 
+code snippets of the website <a href="https://www.learneroo.com">learneroo</a>
+
+It is fun to learn !!!!
