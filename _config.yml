@@ -17,6 +17,7 @@ custom:
         git: git
         mysql: mysql
         datastructure: data structure
+        ror: Ruby on Rails
     categories:
       - name:  php
         title: php
@@ -36,11 +37,13 @@ custom:
       - name:  datastructure
         title: data structure
 
+      - name:  ror
+        title: Ruby on Rails 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
     author:
-        name: Haozhongzhi
+        name: 郝中智
         email: wecangonow@sina.com
         disqus: woaihzz
         gcse: 000346898720731947188:13h55x32l0y     # Google自定义搜索标识ID
