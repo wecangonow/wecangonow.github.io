@@ -11,6 +11,7 @@ desc: 日积月累.
 
 custom:
     category:
+        c: 
         php: php
         vim: vim
         linux: linux
@@ -19,6 +20,8 @@ custom:
         datastructure: data structure
         ror: Ruby on Rails
     categories:
+      - name:  c
+        title: c language
       - name:  php
         title: php
 
