@@ -51,4 +51,4 @@ Redis集合有着不允许相同成员存在的优秀特性。向集合中多次
 
 * 用集合跟踪一个独特的事情。想知道所有访问某个博客文章的独立IP。只要每次都用SADD来处理一个页面访问。那么可以肯定重复的ip诗不会插入的。
 
-![Alt text](http://postimg.org/image/kaazfucw7/)
+![Alt text](http://res.cloudinary.com/dcqh6wuhm/image/upload/v1431567210/redis-testing_daqmil.png)
