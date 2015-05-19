@@ -21,9 +21,9 @@ void bubble_sort(int a[], int n)
 			}
 
 		}
-		printf("%d",j);
-		printf("%d",i);
-		printf("\n");
+		//printf("%d",j);
+		//printf("%d",i);
+		//printf("\n");
 	}
 
 
