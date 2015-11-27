@@ -22,40 +22,69 @@ category: datastructure
 
 ###1. <a id='1'>counter表</a>  
 
-**1. 更新counter**
 ###### 接口功能
-> 获取制定项目的分类信息
+更新counter 
+> 接口链接 counter/update
 
-###### URL
-> [http://www.api.com/index.php](www.api.com/index.php)
 
 ###### 支持格式
 > JSON
 
 ###### HTTP请求方式
-> GET
+> POST
 
 ###### 请求参数
 > |参数|必选|类型|说明|
 |:-----  |:-------|:-----|-----                               |
-|name    |ture    |string|请求的项目名                          |
-|type    |true    |int   |请求项目的类型。1：类型一；2：类型二 。|
+|field   |true    |string|需要更新的列名字（`counter_for_domain`,`counter_for_process`）                          | 
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|company  |string | 所属公司名                      |
-|category |string |所属类型                         |
+|msg	  |string | 响应信息                      |
 
-###### 接口示例
-> 地址：[http://www.api.com/index.php?name="可口可乐"&type=1](http://www.api.com/index.php?name="可口可乐"&type=1)
-``` javascript
-{
-    "statue": 0,
-            "company": "可口可乐",
-                        "category": "饮料",
-                                    } `
-                                    ` `
-###2. <a id="2">C语言链表的实现</a>
 
+###2. <a id="2">domain_block表</a>
+
+######2.1 接口功能  添加域名黑名单
+
+> 接口地址  domain/add
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+> |参数|必选|类型|说明|
+|:-----  |:-------|:-----|-----                               |
+|domain  |true    |string|域名名称                          | 
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
+
+######2.2 接口功能  更新域名黑名单
+
+> 接口地址  domain/update
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+> |参数|必选|类型|说明|
+|:-----  |:-------|:-----|--------|
+|id		 |true    |int   |记录ID  | 
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
