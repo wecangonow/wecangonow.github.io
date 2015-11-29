@@ -19,8 +19,7 @@ category: datastructure
 9. <a href="#9">eggs表</a>
 10. <a href="#10">schedules</a>
 11. <a href="#11">task_strategies</a>
-
-###1. <a id='1'>counter表</a>  > {{{
+###1. <a id='1'>counter表</a>  > 
 
 ###### 接口功能 更新counter 
 
@@ -61,8 +60,8 @@ category: datastructure
 		'status' : 0,
 		'msg'    : 'ok'
 	}
-> }}}
-###2. <a id="2">domain_block表</a>> {{{
+
+###2. <a id="2">domain_block表</a>> 
 
 ######2.1 接口功能  添加域名黑名单
 
@@ -202,9 +201,9 @@ category: datastructure
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |> }}}
+|msg	  |string | 响应信息                      |
 
-###3. <a id="3">process_block表</a>> {{{
+###3. <a id="3">process_block表</a>>
 
 ######3.1 接口功能  添加进程黑名单
 
@@ -346,9 +345,9 @@ category: datastructure
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |> }}}
+|msg	  |string | 响应信息                      |
 
-###4. <a id="4">egg_tasks表</a>
+###4. <a id="4">egg_tasks表</a>>
 
 ######4.1 接口功能  添加egg 任务
 
@@ -387,12 +386,13 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应数据                      |
 
 #####  response example 
 > 
 	{
 		'status' : 0,
-		'msg'    : 'add process ok'
+		'msg'    : 'add task ok'
 	}
 
 ######4.2 接口功能  更新egg任务
@@ -433,12 +433,13 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应数据                      |
 
 #####  response example 
 > 
 	{
 		'status' : 0,
-		'msg'    : 'update domain ok'
+		'msg'    : 'update task ok'
 	}
 
 ######4.3 接口功能  停用egg 任务
@@ -472,6 +473,7 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应数据                      |
 
 ######4.4 接口功能  启动egg任务
 
@@ -504,6 +506,7 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应数据                      |
 
 ######4.5 接口功能  egg任务列表
 
@@ -534,11 +537,12 @@ category: datastructure
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|msg	  |string | 响应信息                      |> }}}
+|data	  |object | 响应数据                      |
 
 ###5. <a id="5">egg_versions表</a>
 
-######4.1 接口功能  添加egg 版本
+######5.1 接口功能  添加egg 版本
 
 
 ###### 支持格式
@@ -550,23 +554,22 @@ category: datastructure
 ###### 请求参数
 >  | 参数       | 必选     | 类型        | 说明 | 值 |
    | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |task |
-   | action     | true     | string      |      |add  |
+   | controller | true     | string      |      |version |
+   | action     | true     | string      |      |add     |
    | data       | true     | object      |      |        |
 
 #####  request example 
 > 
 	{
-		'controller' : 'task',
+		'controller' : 'version',
 		'action'     : 'add',
 		'data'       : {
-				'task_file_id' : int,
-				'task_host_id' : int,
-				'strategy_id'  : int,
-				'is_activer'   : boolean, // 1 or 0 
-				'task_ver'     : int ,
-				'timeout'      : int,
-				'name'         : string
+				'file_id'          : int,
+				'host_id'          : int,
+				'egg_id'           : int,
+				'constraint'       : string,
+				'version'          : string,
+				'server_addresses' : string
 		}
 	}
 
@@ -575,15 +578,16 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
 		'status' : 0,
-		'msg'    : 'add process ok'
+		'msg'    : 'add version ok'
 	}
 
-######4.2 接口功能  更新egg任务
+######5.2 接口功能  更新egg version
 
 
 ###### 支持格式
@@ -595,24 +599,23 @@ category: datastructure
 ###### 请求参数
 >  | 参数       | 必选     | 类型        | 说明 | 值 |
    | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |task |
+   | controller | true     | string      |      |version |
    | action     | true     | string      |      |update  |
    | data       | true     | object      |      |        |
 
 #####  request example 
 > 
 	{
-		'controller' : 'task',
+		'controller' : 'version',
 		'action'     : 'update',
 		'data'       : {
-				'id'           : int,
-				'task_file_id' : int,
-				'task_host_id' : int,
-				'strategy_id'  : int,
-				'is_activer'   : boolean, // 1 or 0 
-				'task_ver'     : int ,
-				'timeout'      : int,
-				'name'         : string
+				'id'               : int,
+				'file_id'          : int,
+				'host_id'          : int,
+				'egg_id'           : int,
+				'constraint'       : string,
+				'version'          : string,
+				'server_addresses' : string
 		}
 	}
 
@@ -626,10 +629,10 @@ category: datastructure
 > 
 	{
 		'status' : 0,
-		'msg'    : 'update domain ok'
+		'msg'    : 'update version ok'
 	}
 
-######4.3 接口功能  停用egg 任务
+######4.3 接口功能  egg version 列表
 
 
 ###### 支持格式
@@ -641,78 +644,14 @@ category: datastructure
 ###### 请求参数
 >  | 参数       | 必选     | 类型        | 说明 | 值 |
    | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |task |
-   | action     | true     | string      |      |stop  |
-   | data       | true     | object      |id (int)   |   |
+   | controller | true     | string      |      |version |
+   | action     | true     | string      |      |index  |
+   | data       | true     | object      |      |   |
 
 #####  request example 
 > 
 	{
-		'controller' : 'task',
-		'action'     : 'stop',
-		'data'       : {
-				'id' : 11 // id for task
-		}
-	}
-
-###### 返回字段
-> |返回字段|字段类型|说明                              |
-|:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-
-######4.4 接口功能  启动egg任务
-
-
-###### 支持格式
-> JSON
-
-###### HTTP请求方式
-> POST
-
-###### 请求参数
->  | 参数       | 必选     | 类型        | 说明 | 值 |
-   | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |task |
-   | action     | true     | string      |      |start  |
-   | data       | true     | object      |id(int)   |   |
-
-#####  request example 
-> 
-	{
-		'controller' : 'task',
-		'action'     : 'start',
-		'data'       : {
-			'id' : 11 // id of task
-		}
-	}
-
-###### 返回字段
-> |返回字段|字段类型|说明                              |
-|:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-
-######4.5 接口功能  egg任务列表
-
-
-###### 支持格式
-> JSON
-
-###### HTTP请求方式
-> POST
-
-###### 请求参数
->  | 参数       | 必选     | 类型        | 说明 | 值 |
-   | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |task |
-   | action     | true     | string      |      |start  |
-   | data       | true     | object      |id(int)   |   |
-
-#####  request example 
-> 
-	{
-		'controller' : 'task',
+		'controller' : 'version',
 		'action'     : 'index',
 		'data'       : {
 		}
@@ -723,3 +662,5 @@ category: datastructure
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+|data	  |object | 响应数据                      |
+
