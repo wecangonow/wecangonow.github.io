@@ -33,9 +33,12 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|-----                               |
-|field   |true    |string|需要更新的列名字（`counter_for_domain`,`counter_for_process`）                          | 
+>
+      | 参数       | 必选     | 类型        | 说明 | 值 |
+      | :-----     | :------- | :---------- |
+      | controller | true     | string      |      |    |
+      | action     | true     | string      |      |    |
+      | data       | true     | string      |      |    |
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
