@@ -35,9 +35,20 @@ category: datastructure
 ###### 请求参数
 >  | 参数       | 必选     | 类型        | 说明 | 值 |
    | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |    |
-   | action     | true     | string      |      |    |
-   | data       | true     | string      |      |    |
+   | controller | true     | string      |      |counter    |
+   | action     | true     | string      |      |update    |
+   | data       | true     | array       |      |       |
+
+##### example 
+> 
+	{
+		'controller' : 'counter',
+		'action'     : 'update',
+		'data'       : {
+				'counter_for_domain' : true  // counter_for_domain 与counter_for_process 二者仅需要一个且必须有一个
+				'counter_for_process' : true
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
