@@ -20,11 +20,9 @@ category: datastructure
 10. <a href="#10">schedules</a>
 11. <a href="#11">task_strategies</a>
 
-###1. <a id='1'>counter表</a>  
+###1. <a id='1'>counter表</a>  > {{{
 
 ###### 接口功能 更新counter 
-> 接口链接 counter/update
-
 
 ###### 支持格式
 > JSON
@@ -35,11 +33,11 @@ category: datastructure
 ###### 请求参数
 >  | 参数       | 必选     | 类型        | 说明 | 值 |
    | :-----     | :------- | :---------- |
-   | controller | true     | string      |      |counter    |
-   | action     | true     | string      |      |update    |
-   | data       | true     | array       |      |       |
+   | controller | true     | string      |      |counter |
+   | action     | true     | string      |      |update  |
+   | data       | true     | object      |counter_for_process (boolean) or counter_for_domain (boolean)      |        |
 
-##### example 
+#####  request example 
 > 
 	{
 		'controller' : 'counter',
@@ -57,11 +55,17 @@ category: datastructure
 |msg	  |string | 响应信息                      |
 
 
-###2. <a id="2">domain_block表</a>
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'ok'
+	}
+> }}}
+###2. <a id="2">domain_block表</a>> {{{
 
 ######2.1 接口功能  添加域名黑名单
 
-> 接口地址  domain/add
 
 ###### 支持格式
 > JSON
@@ -70,20 +74,37 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|-----                               |
-|domain  |true    |string|域名名称                          | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |domain |
+   | action     | true     | string      |      |add  |
+   | data       | true     | object      |domain(string)   |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'domain',
+		'action'     : 'add',
+		'data'       : {
+				'domain' : 'domain_name'  // www.baidu.com
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'add domain ok'
+	}
 
 ######2.2 接口功能  更新域名黑名单
 
-> 接口地址  domain/update
-
 ###### 支持格式
 > JSON
 
@@ -91,19 +112,37 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |domain |
+   | action     | true     | string      |      |update  |
+   | data       | true     | object      |id (int)   |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'domain',
+		'action'     : 'update',
+		'data'       : {
+				'id' : 11 // id for record
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
+
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'update domain ok'
+	}
 
 ######2.3 接口功能  删除域名黑名单
 
-> 接口地址  domain/delete
 
 ###### 支持格式
 > JSON
@@ -112,9 +151,21 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |domain |
+   | action     | true     | string      |      |delete  |
+   | data       | true     | object      |id (int)   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'domain',
+		'action'     : 'delete',
+		'data'       : {
+				'id' : 11 // id for record
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
@@ -122,32 +173,8 @@ category: datastructure
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
 
-######2.3 接口功能  获取域名黑名单记录
+######2.4 接口功能  获取域名黑名单记录
 
-> 接口地址  domain/list
-
-###### 支持格式
-> JSON
-
-###### HTTP请求方式
-> GET
-
-###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
-
-###### 返回字段
-> |返回字段|字段类型|说明                              |
-|:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-
-###3. <a id="3">process_block表</a>
-
-######2.1 接口功能  添加进程黑名单
-
-> 接口地址  process/add
 
 ###### 支持格式
 > JSON
@@ -156,20 +183,31 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----    |:-------|:-----|--------|
-|process   |true    |string|进程名称| 
-|signature |true  |string|进程签名| 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |domain |
+   | action     | true     | string      |      |index  |
+   | data       | true     | object      |空   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'domain',
+		'action'     : 'index',
+		'data'       : {
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
 |status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|msg	  |string | 响应信息                      |> }}}
 
-######2.2 接口功能  更新进程黑名单记录
+###3. <a id="3">process_block表</a>> {{{
 
-> 接口地址  process/update
+######3.1 接口功能  添加进程黑名单
+
 
 ###### 支持格式
 > JSON
@@ -178,9 +216,22 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |process |
+   | action     | true     | string      |      |add  |
+   | data       | true     | object      |process(string) signature(string)   |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'process',
+		'action'     : 'add',
+		'data'       : {
+				'process' : 'process'  
+				'signature' : 'signature' 
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
@@ -188,9 +239,15 @@ category: datastructure
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
 
-######2.3 接口功能  删除进程黑名单记录
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'add process ok'
+	}
 
-> 接口地址  process/delete
+######3.2 接口功能  更新进程黑名单
+
 
 ###### 支持格式
 > JSON
@@ -199,9 +256,21 @@ category: datastructure
 > POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |process |
+   | action     | true     | string      |      |update  |
+   | data       | true     | object      |id (int)   |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'process',
+		'action'     : 'update',
+		'data'       : {
+				'id' : 11 // id for record
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
@@ -209,20 +278,38 @@ category: datastructure
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
 
-######2.3 接口功能  获取进程黑名单记录
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'update domain ok'
+	}
 
-> 接口地址  process/list
+######3.3 接口功能  删除进程黑名单
+
 
 ###### 支持格式
 > JSON
 
 ###### HTTP请求方式
-> GET
+> POST
 
 ###### 请求参数
-> |参数|必选|类型|说明|
-|:-----  |:-------|:-----|--------|
-|id		 |true    |int   |记录ID  | 
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |process |
+   | action     | true     | string      |      |delete  |
+   | data       | true     | object      |id (int)   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'process',
+		'action'     : 'delete',
+		'data'       : {
+				'id' : 11 // id for record
+		}
+	}
 
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
@@ -230,3 +317,221 @@ category: datastructure
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
 
+######3.4 接口功能  获取进程黑名单记录
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |domain |
+   | action     | true     | string      |      |index  |
+   | data       | true     | object      |空   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'process',
+		'action'     : 'index',
+		'data'       : {
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |> }}}
+
+###4. <a id="4">egg_tasks表</a>
+
+######4.1 接口功能  添加egg 任务
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |task |
+   | action     | true     | string      |      |add  |
+   | data       | true     | object      |      |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'task',
+		'action'     : 'add',
+		'data'       : {
+				'task_file_id' : int,
+				'task_host_id' : int,
+				'strategy_id'  : int,
+				'is_activer'   : boolean, // 1 or 0 
+				'task_ver'     : int ,
+				'timeout'      : int,
+				'name'         : string
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
+
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'add process ok'
+	}
+
+######4.2 接口功能  更新egg任务
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |task |
+   | action     | true     | string      |      |update  |
+   | data       | true     | object      |      |        |
+
+#####  request example 
+> 
+	{
+		'controller' : 'task',
+		'action'     : 'update',
+		'data'       : {
+				'id'           : int,
+				'task_file_id' : int,
+				'task_host_id' : int,
+				'strategy_id'  : int,
+				'is_activer'   : boolean, // 1 or 0 
+				'task_ver'     : int ,
+				'timeout'      : int,
+				'name'         : string
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
+
+#####  response example 
+> 
+	{
+		'status' : 0,
+		'msg'    : 'update domain ok'
+	}
+
+######4.3 接口功能  停用egg 任务
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |task |
+   | action     | true     | string      |      |stop  |
+   | data       | true     | object      |id (int)   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'task',
+		'action'     : 'stop',
+		'data'       : {
+				'id' : 11 // id for task
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
+
+######4.4 接口功能  启动egg任务
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |task |
+   | action     | true     | string      |      |start  |
+   | data       | true     | object      |id(int)   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'task',
+		'action'     : 'start',
+		'data'       : {
+			'id' : 11 // id of task
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
+
+######4.5 接口功能  egg任务列表
+
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> POST
+
+###### 请求参数
+>  | 参数       | 必选     | 类型        | 说明 | 值 |
+   | :-----     | :------- | :---------- |
+   | controller | true     | string      |      |task |
+   | action     | true     | string      |      |start  |
+   | data       | true     | object      |id(int)   |   |
+
+#####  request example 
+> 
+	{
+		'controller' : 'task',
+		'action'     : 'index',
+		'data'       : {
+		}
+	}
+
+###### 返回字段
+> |返回字段|字段类型|说明                              |
+|:-----   |:------|:-----------------------------   |
+|status   |int    |返回结果状态。0：正常；1：错误。   |
+|msg	  |string | 响应信息                      |
