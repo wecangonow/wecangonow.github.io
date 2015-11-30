@@ -204,7 +204,7 @@ category: datastructure
 |status   |int    |返回结果状态。0：正常；1：错误。   |
 |msg	  |string | 响应信息                      |
 
-###3. <a id="3">process_block表</a>>
+###3. <a id="3">process_block表</a>
 
 ######3.1 接口功能  添加进程黑名单
 
@@ -1355,7 +1355,7 @@ category: datastructure
 		'data'   : {}
 	}
 
-######10.2 接口功能  更新strategy
+######11.2 接口功能  更新strategy
 
 
 ###### 支持格式
@@ -1407,7 +1407,7 @@ category: datastructure
 		'data'   : {}
 	}
 
-######10.3 接口功能  strategy列表
+######11.3 接口功能  strategy列表
 
 
 ###### 支持格式
