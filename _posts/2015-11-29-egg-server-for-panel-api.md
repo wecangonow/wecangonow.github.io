@@ -51,15 +51,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
 
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'ok'
+		'rc' : 0,
+		'message'    : 'ok'
 	}
 
 ###2. <a id="2">domain_block表</a>
@@ -93,14 +93,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add domain ok'
+		'rc' : 0,
+		'message'    : 'add domain ok'
 	}
 
 ######2.2 接口功能  更新域名黑名单
@@ -131,14 +132,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update domain ok'
+		'rc' : 0,
+		'message'    : 'update domain ok'
 	}
 
 ######2.3 接口功能  删除域名黑名单
@@ -170,8 +172,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ######2.4 接口功能  获取域名黑名单记录
 
@@ -201,10 +204,11 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
-###3. <a id="3">process_block表</a>>
+###3. <a id="3">process_block表</a>
 
 ######3.1 接口功能  添加进程黑名单
 
@@ -236,14 +240,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add process ok'
+		'rc' : 0,
+		'message'    : 'add process ok'
 	}
 
 ######3.2 接口功能  更新进程黑名单
@@ -275,14 +280,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update domain ok'
+		'rc' : 0,
+		'message'    : 'update domain ok'
 	}
 
 ######3.3 接口功能  删除进程黑名单
@@ -314,8 +320,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ######3.4 接口功能  获取进程黑名单记录
 
@@ -345,8 +352,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###4. <a id="4">egg_tasks表</a>
 
@@ -385,15 +393,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add task ok'
+		'rc' : 0,
+		'message'    : 'add task ok'
 	}
 
 ######4.2 接口功能  更新egg任务
@@ -432,15 +440,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update task ok'
+		'rc' : 0,
+		'message'    : 'update task ok'
 	}
 
 ######4.3 接口功能  停用egg 任务
@@ -472,9 +480,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ######4.4 接口功能  启动egg任务
 
@@ -505,9 +513,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ######4.5 接口功能  egg任务列表
 
@@ -537,9 +545,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |> }}}
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |> }}}
+|payroll	  |object | 响应信息                      |
 
 ###5. <a id="5">egg_versions表</a>
 
@@ -577,15 +585,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add version ok'
+		'rc' : 0,
+		'message'    : 'add version ok'
 	}
 
 ######5.2 接口功能  更新egg version
@@ -623,14 +631,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update version ok'
+		'rc' : 0,
+		'message'    : 'update version ok'
 	}
 
 ######5.3 接口功能  egg version 列表
@@ -661,9 +670,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 
 ###6. <a id="6">files表</a>
@@ -704,15 +713,15 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add file ok',
+		'rc' : 0,
+		'message'    : 'add file ok',
 		'data'   : {}
 	}
 
@@ -753,16 +762,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update version ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update version ok',
+		'payroll'   : {}
 	}
 
 ######6.3 接口功能  file 列表
@@ -793,9 +802,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###7. <a id="7">hosts表</a>
 
@@ -834,16 +843,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add host ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'add host ok',
+		'payroll'   : {}
 	}
 
 ######7.2 接口功能  更新host
@@ -882,16 +891,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update host ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update host ok',
+		'payroll'   : {}
 	}
 
 ######7.3 接口功能  host 列表
@@ -922,9 +931,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###8. <a id="8">named_file表</a>
 
@@ -959,16 +968,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add named file ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'add named file ok',
+		'payroll'   : {}
 	}
 
 ######7.2 接口功能  更新named file
@@ -1003,16 +1012,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update host ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update host ok',
+		'payroll'   : {}
 	}
 
 ######7.3 接口功能  named file 列表
@@ -1043,9 +1052,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###9. <a id="9">eggs表</a>
 
@@ -1083,16 +1092,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add egg ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'add egg ok',
+		'payroll'   : {}
 	}
 
 ######9.2 接口功能  更新egg
@@ -1129,16 +1138,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update egg ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update egg ok',
+		'payroll'   : {}
 	}
 
 ######9.3 接口功能  egg列表
@@ -1169,9 +1178,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###10. <a id="10">schedules表</a>
 
@@ -1210,16 +1219,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add schedule ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'add schedule ok',
+		'payroll'   : {}
 	}
 
 ######10.2 接口功能  更新schedule
@@ -1258,16 +1267,16 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update schedule ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update schedule ok',
+		'payroll'   : {}
 	}
 
 ######10.3 接口功能  schedule列表
@@ -1298,9 +1307,9 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 ###11. <a id="11">task_strategies表</a>
 
@@ -1343,19 +1352,19 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'add strategy ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'add strategy ok',
+		'payroll'   : {}
 	}
 
-######10.2 接口功能  更新strategy
+######11.2 接口功能  更新strategy
 
 
 ###### 支持格式
@@ -1395,19 +1404,19 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应信息                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
 #####  response example 
 > 
 	{
-		'status' : 0,
-		'msg'    : 'update strategy ok',
-		'data'   : {}
+		'rc' : 0,
+		'message'    : 'update strategy ok',
+		'payroll'   : {}
 	}
 
-######10.3 接口功能  strategy列表
+######11.3 接口功能  strategy列表
 
 
 ###### 支持格式
@@ -1435,7 +1444,7 @@ category: datastructure
 ###### 返回字段
 > |返回字段|字段类型|说明                              |
 |:-----   |:------|:-----------------------------   |
-|status   |int    |返回结果状态。0：正常；1：错误。   |
-|msg	  |string | 响应信息                      |
-|data	  |object | 响应数据                      |
+|rc   |int    |返回结果状态。0：正常；1：错误。   |
+|message	  |string | 响应信息                      |
+|payroll	  |object | 响应信息                      |
 
