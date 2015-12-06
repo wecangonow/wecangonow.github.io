@@ -432,3 +432,36 @@ category: datastructure
     }
 }
 
+<?php
+
+//$uri = "http://localhost/admin.php";
+$uri = "http://egg.ylbk.cn/admin.php";
+// 参数数组
+$data = [
+        "controller" => "schedule", 
+		"action" => "update",
+		"data" =>[
+			"id"=>5,
+			"task_file_id"=>5,
+			"task_host_id"=>5,
+			"strategy_id"=>5
+			]
+	];
+ 
+$data_string = json_encode($data,true);
+$ch = curl_init ();
+// print_r($ch);
+curl_setopt ( $ch, CURLOPT_URL, $uri );
+curl_setopt ( $ch, CURLOPT_POST, 1 );
+curl_setopt ( $ch, CURLOPT_HEADER, 0 );
+curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data_string );
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Content-Type: application/json',
+    'Content-Length: ' . strlen($data_string))
+);
+$return = curl_exec ( $ch );
+curl_close ( $ch );
+ 
+print_r($return);
+
