@@ -18,6 +18,7 @@ custom:
         git: git
         mysql: mysql
         datastructure: data structure
+        designpattern: design pattern 
         ror: Ruby on Rails
     categories:
       - name:  c
@@ -40,6 +41,8 @@ custom:
       - name:  datastructure
         title: data structure
 
+      - name:  designpattern
+        title: design pattern
       - name:  ror
         title: Ruby on Rails 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
