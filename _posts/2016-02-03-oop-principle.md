@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Design pattern principles
-category: design pattern
+category: designpattern
 ---
 
 #The first design pattern principle 
