@@ -11,40 +11,25 @@ desc: 日积月累.
 
 custom:
     category:
-        c: 
+        c: clang
         php: php
-        vim: vim
         linux: linux
         git: git
         mysql: mysql
-        datastructure: data structure
-        designpattern: design pattern 
-        ror: Ruby on Rails
+        golang: golang
     categories:
       - name:  c
         title: c language
       - name:  php
         title: php
-
-      - name:  vim
-        title: vim
-
       - name:  linux
         title: linux
-
       - name:  git
         title: git
-
       - name:  mysql
         title: mysql
-
-      - name:  datastructure
-        title: data structure
-
-      - name:  designpattern
-        title: design pattern
-      - name:  ror
-        title: Ruby on Rails 
+      - name:  golang
+        title: Golang 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
