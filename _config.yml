@@ -17,6 +17,7 @@ custom:
         git: git
         mysql: mysql
         golang: golang
+        ds: data structure
     categories:
       - name:  c
         title: c language
@@ -30,6 +31,8 @@ custom:
         title: mysql
       - name:  golang
         title: Golang 
+      - name:  ds
+        title: data structure 
     scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
