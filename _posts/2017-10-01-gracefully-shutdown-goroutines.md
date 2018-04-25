@@ -1,7 +1,7 @@
 ---
 layout: post
 title: gracefully shutdown of goroutines
-category: go
+category: golang
 ---
 
 ## 原文地址
